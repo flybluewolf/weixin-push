@@ -39,7 +39,9 @@ pusher.singleSend('12345', {
   fid: 1000003,
   fileid: 1000004, 
   appmsgid: 1000003
-})
+}, function (err, data) {
+  // 发送成功的响应data.should.eql({ret: 0, msg: 'ok'});
+});
 /**
  * 获取包含关键字的消息
  * @param {String} keyword 消息中包含的关键字
