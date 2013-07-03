@@ -76,6 +76,21 @@ pusher.getUsers(function (err, data) {});
 npm install pwechat
 ```  
 
+## 贡献者们
+$ git summary 
+
+ project  : weixin-push
+ repo age : 3 months ago
+ commits  : 26
+ active   : 8 days
+ files    : 13
+ authors  : 
+    12  dead-horse              46.2%
+     9  不四                  34.6%
+     3  dead_horse              11.5%
+     1  Xiayu                   3.8%
+     1  hsinglin                3.8%
+
 ## Lincense  
 (The MIT License)
 
