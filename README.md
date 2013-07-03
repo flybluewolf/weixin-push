@@ -5,7 +5,8 @@ pushwechat![travis-ci](https://secure.travis-ci.org/dead-horse/weixin-push.png)
 
 ## 用法  
 
-``` js
+```js
+
 var Pusher = require('pwechat');
 var pusher = Pusher.create('youremail', 'yourpassword');
 
@@ -22,6 +23,23 @@ pusher.singleSend('12345, '测试内容', function (err, data) {
   // 发送成功的响应data.should.eql({ret: 0, msg: 'ok'});
 });
 
+//除了可以发送文字外，还支持发送其他的微信资源（在微信素材管理中添加）。  
+//type为发送的不同资源类型，不同的类型需要的字段也不同
+//发送前需要把要发送的资源上传到微信，并找到对应的`fid`等字段
+
+pusher.singleSend('12345', {
+  type: 2, //图片
+  fid: 1000002 //图片的资源id
+}, function (err, data) {
+  // 发送成功的响应data.should.eql({ret: 0, msg: 'ok'});
+});
+
+pusher.singleSend('12345', {
+  type: 10, //图文
+  fid: 1000003,
+  fileid: 1000004, 
+  appmsgid: 1000003
+})
 /**
  * 获取包含关键字的消息
  * @param {String} keyword 消息中包含的关键字
