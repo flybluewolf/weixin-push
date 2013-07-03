@@ -51,8 +51,24 @@ pusher.singleSend('12345', {
 pusher.getMessage('@help', 10, 1000, function (err, data) {
   // 获取成功的响应，data会是一个数组
 });
-```
 
+/**
+ * 获取公众账号的粉丝
+ * 响应： 
+  [{ 
+    fakeId: '98106560',
+    nickName: 'nick1',
+    remarkName: '',
+    groupId: '0' 
+  }, { 
+    fakeId: '3297485',
+    nickName: 'nick2',
+    remarkName: '',
+    groupId: '0' 
+  }]
+ */
+pusher.getUsers(function (err, data) {});
+```
 
 ## 安装  
 
