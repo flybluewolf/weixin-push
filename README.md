@@ -79,6 +79,7 @@ npm install pwechat
 ## 贡献者们
 $ git summary 
 
+```
  project  : weixin-push
  repo age : 3 months ago
  commits  : 26
@@ -90,6 +91,7 @@ $ git summary
      3  dead_horse              11.5%
      1  Xiayu                   3.8%
      1  hsinglin                3.8%
+```
 
 ## Lincense  
 (The MIT License)
