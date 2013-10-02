@@ -1,4 +1,12 @@
 
+0.0.9 / 2013-10-03 
+==================
+
+  * add readme
+  * fix style
+  * Merge pull request #10 from angelazou/master
+  * Add getMedia method
+
 0.0.8 / 2013-09-08 
 ==================
 
