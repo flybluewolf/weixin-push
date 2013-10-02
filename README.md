@@ -68,6 +68,12 @@ pusher.getMessage('@help', 10, 1000, function (err, data) {
   }]
  */
 pusher.getUsers(function (err, data) {});
+
+/**
+ * 获取公众账号的上载媒体列表
+ * @param {String} type 媒体类别 2为图片, 3为语音, 4为视频, 10为图文
+ */
+Pusher.prototype.getMedia = function(type, function (err, data) {});
 ```
 
 ## 安装  
