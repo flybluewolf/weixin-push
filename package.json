@@ -7,8 +7,9 @@
   "repository": { "type": "git", "url": "git://gitlab.alibaba-inc.com/pushwechat.git" },
   "dependencies": {
     "urllib": "0.3.4",
-    "utility": "0.0.3"
-    },
+    "utility": "0.0.3",
+    "cheerio": "0.12.2"
+  },
   "devDependencies": {
     "mocha": "*",
     "should": "*",
