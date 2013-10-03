@@ -195,16 +195,16 @@ $ git summary
 ```
  project  : weixin-push
  repo age : 7 months ago
- commits  : 37
+ commits  : 40
  active   : 14 days
  files    : 13
  authors  : 
-    21  dead-horse              56.8%
-     9  不四                  24.3%
-     4  dead_horse              10.8%
-     1  Angela Zou              2.7%
-     1  Xiayu                   2.7%
-     1  hsinglin                2.7%
+    22  dead-horse              55.0%
+     9  不四                  22.5%
+     5  dead_horse              12.5%
+     2  Angela Zou              5.0%
+     1  Xiayu                   2.5%
+     1  hsinglin                2.5%
 ```
 
 ## Lincense  

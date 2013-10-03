@@ -1,4 +1,10 @@
 
+0.1.0 / 2013-10-03 
+==================
+
+  * Merge pull request #11 from angelazou/master
+  * Add Groups
+
 0.0.9 / 2013-10-03 
 ==================
 
