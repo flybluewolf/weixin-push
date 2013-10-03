@@ -42,6 +42,7 @@ pusher.singleSend('12345', {
 }, function (err, data) {
   // 发送成功的响应data.should.eql({ret: 0, msg: 'ok'});
 });
+
 /**
  * 获取包含关键字的消息
  * @param {String} keyword 消息中包含的关键字
@@ -70,10 +71,116 @@ pusher.getMessage('@help', 10, 1000, function (err, data) {
 pusher.getUsers(function (err, data) {});
 
 /**
+ * 获取单个用户详情, 包括所有分组
+ * @param {String}   fakeId   用户的fakeId
+ * @param {Function} callback
+ * 响应:
+{ "FakeId" : "12345",
+  "NickName" : "Jane Doe",
+  "ReMarkName" : "",
+  "Username" : "wxid_12345",
+  "Signature": "",
+  "Country" : "中国",
+  "Province" : "河南",
+  "City" : "安阳",
+  "Sex" : "1",
+  "GroupID" : "0",
+  "Groups"  : [
+    { "GroupId": "0", "GroupName": "未分组" },
+    { "GroupId": "1", "GroupName": "黑名单" },
+    { "GroupId": "2", "GroupName": "星标组" }
+  ]
+}
+ */
+pusher.getUserDetail('12345', function (err, data) {});
+
+/**
+ * 修改用户分组, 每个用户只能分一组
+ * @param  {[String]}   fakeId 用户的fakeId
+ * @param  {[String]}   userGroupId 分组Id
+ * @param  {Function} callback
+ * 响应:
+{ "ret":"0",
+  "result": [
+    {"fakeId":"12345","ret":"0"}
+  ]
+}
+ */
+pusher.modifyUserGroup('12345', '100', function (err, data) {});
+
+
+/**
+ * 添加分组
+ * @param {[String]}   groupName 分组名称
+ * @param {Function} callback 
+ * 响应:
+{ "ErrCode":"",
+  "ErrMsg":"",
+  "GroupId":"103",
+  "GroupName":"apple",
+  "MemberCnt":"0"
+}
+ */
+pusher.addGroup('apple', function (err, data) {});
+
+/**
+ * 重命名分组
+ * @param  {[String]}   groupId   分组ID
+ * @param  {[String]}   groupName 新的分组名称
+ * @param  {Function}   callback
+ * 响应:
+{ "ErrCode":"",
+  "ErrMsg":"",
+  "GroupId":"100",
+  "GroupName":"hello",
+  "MemberCnt":"0"
+}
+ */
+pusher.renameGroup('100', 'orange', function (err, data) {});
+
+
+/**
+ * 删除分组
+ * @param  {[String]}   groupId   分组ID
+ * @param  {Function}   callback
+ * 响应:
+{ "ErrCode":"",
+  "ErrMsg":"",
+  "GroupId":"100",
+  "GroupName":"",
+  "MemberCnt":"0"
+}
+ */
+pusher.deleteGroup('100', function (err, data) {});
+
+
+/**
  * 获取公众账号的上载媒体列表
  * @param {String} type 媒体类别 2为图片, 3为语音, 4为视频, 10为图文
+ * @param {Function} callback
+ * 响应:
+[
+{ id: '10000000',
+  fileName: '2013082810294238334.jpg',
+  type: '2',
+  size: '30.6 K',
+  dateTime: 1378618280,
+  length: '0' }
+{ id: '10000004',
+  fileName: '2013082608430532299.gif',
+  type: '2',
+  size: '3.0 K',
+  dateTime: 1378623899,
+  length: '0' }
+{ id: '10000006',
+  fileName: '0.jpg',
+  type: '2',
+  size: '55.3 K',
+  dateTime: 1378780173,
+  length: '0' }
+]
  */
-Pusher.prototype.getMedia = function(type, function (err, data) {});
+pusher.getMedia('2', function (err, data) {});
 ```
 
 ## 安装  
