@@ -3,6 +3,8 @@ pushwechat![travis-ci](https://secure.travis-ci.org/dead-horse/weixin-push.png)
 
  通过模拟后台登录的形式，进行消息的发送和获取。   
 
+（由于微信后台不断更新，且我已经没有这个需求了，现在的代码可能已经无法运行，有需要的同学可以修改并发送 pull request）
+
 ## 用法  
 
 ```js
