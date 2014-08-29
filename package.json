@@ -6,7 +6,7 @@
   "author": "dead-horse <dead_horse@qq.com>",
   "repository": { "type": "git", "url": "git://gitlab.alibaba-inc.com/pushwechat.git" },
   "dependencies": {
-    "urllib": "0.3.4",
+    "urllib": "1.4.1",
     "utility": "0.0.3",
     "cheerio": "0.12.2"
   },
